@@ -20,6 +20,7 @@ const chromium = env.chromium || undefined;
 const chromiumProfile = env.chromiumProfile || undefined;
 const firefox = env.firefox || undefined;
 const firefoxProfile = env.firefoxProfile || undefined;
+const safari = env.safari || undefined;
 const keepProfileChanges = !!env.keepProfileChanges;
 const profileCreateIfMissing = !!env.profileCreateIfMissing;
 
@@ -159,12 +160,22 @@ const edgeConfig = buildExtConfig({
   usesEdgeStore: true,
 });
 
+const safariConfig = buildExtConfig({
+  distFolder: 'dist-safari',
+  needsClipboardWrite: false,
+  supportsMatchAboutBlank: false,
+  supportsSvgIcons: false,
+  supportsBrowserStyle: false,
+});
+
 module.exports = (env) => {
   let configs = [testConfig];
   if (env && env.target === 'chrome') {
     configs.push({ ...chromeConfig, name: 'extension' });
   } else if (env && env.target === 'edge') {
     configs.push({ ...edgeConfig, name: 'extension' });
+  } else if (env && env.target === 'safari') {
+    configs.push({ ...safariConfig, name: 'extension' });
   } else {
     configs.push({ ...firefoxConfig, name: 'extension' });
   }
@@ -291,6 +302,7 @@ function buildExtConfig({
       })
     );
   } else {
+    // web-ext has no special integration with Safari, so all we do is build the Web Extension.
     plugins.push(
       new WebExtPlugin({ sourceDir: path.resolve(__dirname, distFolder) })
     );

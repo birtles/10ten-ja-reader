@@ -166,6 +166,7 @@ const safariConfig = buildExtConfig({
   supportsMatchAboutBlank: false,
   supportsSvgIcons: false,
   supportsBrowserStyle: false,
+  useEventPage: true,
 });
 
 module.exports = (env) => {

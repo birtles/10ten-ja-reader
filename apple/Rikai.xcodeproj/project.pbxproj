@@ -1,0 +1,965 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7D652F272684A2BF0070A280 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D652F262684A2BF0070A280 /* AppDelegate.swift */; };
+		7D652F292684A2BF0070A280 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D652F282684A2BF0070A280 /* SceneDelegate.swift */; };
+		7D652F2C2684A2BF0070A280 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D652F2A2684A2BF0070A280 /* LaunchScreen.storyboard */; };
+		7D652F2F2684A2BF0070A280 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D652F2D2684A2BF0070A280 /* Main.storyboard */; };
+		7D652F382684A2BF0070A280 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D652F372684A2BF0070A280 /* AppDelegate.swift */; };
+		7D652F3B2684A2BF0070A280 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D652F392684A2BF0070A280 /* Main.storyboard */; };
+		7D652F432684A2BF0070A280 /* Rikai Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7D652F422684A2BF0070A280 /* Rikai Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7D652F4D2684A2BF0070A280 /* Rikai Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7D652F4C2684A2BF0070A280 /* Rikai Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7D652F522684A2BF0070A280 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 7D652F162684A2BE0070A280 /* Main.html */; };
+		7D652F532684A2BF0070A280 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 7D652F162684A2BE0070A280 /* Main.html */; };
+		7D652F542684A2BF0070A280 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D652F182684A2BE0070A280 /* Icon.png */; };
+		7D652F552684A2BF0070A280 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D652F182684A2BE0070A280 /* Icon.png */; };
+		7D652F562684A2BF0070A280 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 7D652F192684A2BE0070A280 /* Style.css */; };
+		7D652F572684A2BF0070A280 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 7D652F192684A2BE0070A280 /* Style.css */; };
+		7D652F582684A2BF0070A280 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 7D652F1A2684A2BE0070A280 /* Script.js */; };
+		7D652F592684A2BF0070A280 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 7D652F1A2684A2BE0070A280 /* Script.js */; };
+		7D652F5A2684A2BF0070A280 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D652F1B2684A2BE0070A280 /* ViewController.swift */; };
+		7D652F5B2684A2BF0070A280 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D652F1B2684A2BE0070A280 /* ViewController.swift */; };
+		7D652F5C2684A2BF0070A280 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D652F1C2684A2BF0070A280 /* Assets.xcassets */; };
+		7D652F5D2684A2BF0070A280 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D652F1C2684A2BF0070A280 /* Assets.xcassets */; };
+		7D652F5E2684A2BF0070A280 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D652F1E2684A2BF0070A280 /* SafariWebExtensionHandler.swift */; };
+		7D652F5F2684A2BF0070A280 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D652F1E2684A2BF0070A280 /* SafariWebExtensionHandler.swift */; };
+		7D652F7F2684A2C00070A280 /* css in Resources */ = {isa = PBXBuildFile; fileRef = 7D652F732684A2C00070A280 /* css */; };
+		7D652F802684A2C00070A280 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 7D652F742684A2C00070A280 /* images */; };
+		7D652F812684A2C00070A280 /* rikaichamp-content.js in Resources */ = {isa = PBXBuildFile; fileRef = 7D652F752684A2C00070A280 /* rikaichamp-content.js */; };
+		7D652F822684A2C00070A280 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D652F772684A2C00070A280 /* manifest.json */; };
+		7D652F832684A2C00070A280 /* rikaichamp-jpdict.js in Resources */ = {isa = PBXBuildFile; fileRef = 7D652F782684A2C00070A280 /* rikaichamp-jpdict.js */; };
+		7D652F842684A2C00070A280 /* options.html in Resources */ = {isa = PBXBuildFile; fileRef = 7D652F792684A2C00070A280 /* options.html */; };
+		7D652F852684A2C00070A280 /* rikaichamp-background.js in Resources */ = {isa = PBXBuildFile; fileRef = 7D652F7A2684A2C00070A280 /* rikaichamp-background.js */; };
+		7D652F862684A2C00070A280 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = 7D652F7C2684A2C00070A280 /* _locales */; };
+		7D652F872684A2C00070A280 /* data in Resources */ = {isa = PBXBuildFile; fileRef = 7D652F7D2684A2C00070A280 /* data */; };
+		7D652F882684A2C00070A280 /* rikaichamp-options.js in Resources */ = {isa = PBXBuildFile; fileRef = 7D652F7E2684A2C00070A280 /* rikaichamp-options.js */; };
+		7D652F892684A2C00070A280 /* css in Resources */ = {isa = PBXBuildFile; fileRef = 7D652F732684A2C00070A280 /* css */; };
+		7D652F8A2684A2C00070A280 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 7D652F742684A2C00070A280 /* images */; };
+		7D652F8B2684A2C00070A280 /* rikaichamp-content.js in Resources */ = {isa = PBXBuildFile; fileRef = 7D652F752684A2C00070A280 /* rikaichamp-content.js */; };
+		7D652F8C2684A2C00070A280 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D652F772684A2C00070A280 /* manifest.json */; };
+		7D652F8D2684A2C00070A280 /* rikaichamp-jpdict.js in Resources */ = {isa = PBXBuildFile; fileRef = 7D652F782684A2C00070A280 /* rikaichamp-jpdict.js */; };
+		7D652F8E2684A2C00070A280 /* options.html in Resources */ = {isa = PBXBuildFile; fileRef = 7D652F792684A2C00070A280 /* options.html */; };
+		7D652F8F2684A2C00070A280 /* rikaichamp-background.js in Resources */ = {isa = PBXBuildFile; fileRef = 7D652F7A2684A2C00070A280 /* rikaichamp-background.js */; };
+		7D652F902684A2C00070A280 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = 7D652F7C2684A2C00070A280 /* _locales */; };
+		7D652F912684A2C00070A280 /* data in Resources */ = {isa = PBXBuildFile; fileRef = 7D652F7D2684A2C00070A280 /* data */; };
+		7D652F922684A2C00070A280 /* rikaichamp-options.js in Resources */ = {isa = PBXBuildFile; fileRef = 7D652F7E2684A2C00070A280 /* rikaichamp-options.js */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7D652F442684A2BF0070A280 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D652F102684A2BE0070A280 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D652F412684A2BF0070A280;
+			remoteInfo = "Rikai Extension (iOS)";
+		};
+		7D652F4E2684A2BF0070A280 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D652F102684A2BE0070A280 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D652F4B2684A2BF0070A280;
+			remoteInfo = "Rikai Extension (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7D652F652684A2BF0070A280 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				7D652F432684A2BF0070A280 /* Rikai Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D652F6C2684A2BF0070A280 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				7D652F4D2684A2BF0070A280 /* Rikai Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7D652F172684A2BE0070A280 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
+		7D652F182684A2BE0070A280 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		7D652F192684A2BE0070A280 /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		7D652F1A2684A2BE0070A280 /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		7D652F1B2684A2BE0070A280 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7D652F1C2684A2BF0070A280 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7D652F1E2684A2BF0070A280 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		7D652F232684A2BF0070A280 /* Rikai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rikai.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D652F262684A2BF0070A280 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7D652F282684A2BF0070A280 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7D652F2B2684A2BF0070A280 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7D652F2E2684A2BF0070A280 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7D652F302684A2BF0070A280 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D652F352684A2BF0070A280 /* Rikai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rikai.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D652F372684A2BF0070A280 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7D652F3A2684A2BF0070A280 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7D652F3C2684A2BF0070A280 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D652F3D2684A2BF0070A280 /* Rikai.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Rikai.entitlements; sourceTree = "<group>"; };
+		7D652F422684A2BF0070A280 /* Rikai Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Rikai Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D652F472684A2BF0070A280 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D652F4C2684A2BF0070A280 /* Rikai Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Rikai Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D652F512684A2BF0070A280 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D652F712684A2C00070A280 /* rikaichamp-jpdict.js.map */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = "rikaichamp-jpdict.js.map"; path = "../../dist-safari/rikaichamp-jpdict.js.map"; sourceTree = "<group>"; };
+		7D652F722684A2C00070A280 /* rikaichamp-content.js.map */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = "rikaichamp-content.js.map"; path = "../../dist-safari/rikaichamp-content.js.map"; sourceTree = "<group>"; };
+		7D652F732684A2C00070A280 /* css */ = {isa = PBXFileReference; lastKnownFileType = folder; name = css; path = "../../dist-safari/css"; sourceTree = "<group>"; };
+		7D652F742684A2C00070A280 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = images; path = "../../dist-safari/images"; sourceTree = "<group>"; };
+		7D652F752684A2C00070A280 /* rikaichamp-content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = "rikaichamp-content.js"; path = "../../dist-safari/rikaichamp-content.js"; sourceTree = "<group>"; };
+		7D652F762684A2C00070A280 /* rikaichamp-background.js.map */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = "rikaichamp-background.js.map"; path = "../../dist-safari/rikaichamp-background.js.map"; sourceTree = "<group>"; };
+		7D652F772684A2C00070A280 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = "../../dist-safari/manifest.json"; sourceTree = "<group>"; };
+		7D652F782684A2C00070A280 /* rikaichamp-jpdict.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = "rikaichamp-jpdict.js"; path = "../../dist-safari/rikaichamp-jpdict.js"; sourceTree = "<group>"; };
+		7D652F792684A2C00070A280 /* options.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = options.html; path = "../../dist-safari/options.html"; sourceTree = "<group>"; };
+		7D652F7A2684A2C00070A280 /* rikaichamp-background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = "rikaichamp-background.js"; path = "../../dist-safari/rikaichamp-background.js"; sourceTree = "<group>"; };
+		7D652F7B2684A2C00070A280 /* rikaichamp-options.js.map */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = "rikaichamp-options.js.map"; path = "../../dist-safari/rikaichamp-options.js.map"; sourceTree = "<group>"; };
+		7D652F7C2684A2C00070A280 /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; name = _locales; path = "../../dist-safari/_locales"; sourceTree = "<group>"; };
+		7D652F7D2684A2C00070A280 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = data; path = "../../dist-safari/data"; sourceTree = "<group>"; };
+		7D652F7E2684A2C00070A280 /* rikaichamp-options.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = "rikaichamp-options.js"; path = "../../dist-safari/rikaichamp-options.js"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7D652F202684A2BF0070A280 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D652F322684A2BF0070A280 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D652F3F2684A2BF0070A280 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D652F492684A2BF0070A280 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7D652F0F2684A2BE0070A280 = {
+			isa = PBXGroup;
+			children = (
+				7D652F142684A2BE0070A280 /* Shared (App) */,
+				7D652F1D2684A2BF0070A280 /* Shared (Extension) */,
+				7D652F252684A2BF0070A280 /* iOS (App) */,
+				7D652F362684A2BF0070A280 /* macOS (App) */,
+				7D652F462684A2BF0070A280 /* iOS (Extension) */,
+				7D652F502684A2BF0070A280 /* macOS (Extension) */,
+				7D652F242684A2BF0070A280 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7D652F142684A2BE0070A280 /* Shared (App) */ = {
+			isa = PBXGroup;
+			children = (
+				7D652F1B2684A2BE0070A280 /* ViewController.swift */,
+				7D652F1C2684A2BF0070A280 /* Assets.xcassets */,
+				7D652F152684A2BE0070A280 /* Resources */,
+			);
+			path = "Shared (App)";
+			sourceTree = "<group>";
+		};
+		7D652F152684A2BE0070A280 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7D652F162684A2BE0070A280 /* Main.html */,
+				7D652F182684A2BE0070A280 /* Icon.png */,
+				7D652F192684A2BE0070A280 /* Style.css */,
+				7D652F1A2684A2BE0070A280 /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7D652F1D2684A2BF0070A280 /* Shared (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				7D652F702684A2C00070A280 /* Resources */,
+				7D652F1E2684A2BF0070A280 /* SafariWebExtensionHandler.swift */,
+			);
+			path = "Shared (Extension)";
+			sourceTree = "<group>";
+		};
+		7D652F242684A2BF0070A280 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7D652F232684A2BF0070A280 /* Rikai.app */,
+				7D652F352684A2BF0070A280 /* Rikai.app */,
+				7D652F422684A2BF0070A280 /* Rikai Extension.appex */,
+				7D652F4C2684A2BF0070A280 /* Rikai Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7D652F252684A2BF0070A280 /* iOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				7D652F262684A2BF0070A280 /* AppDelegate.swift */,
+				7D652F282684A2BF0070A280 /* SceneDelegate.swift */,
+				7D652F2A2684A2BF0070A280 /* LaunchScreen.storyboard */,
+				7D652F2D2684A2BF0070A280 /* Main.storyboard */,
+				7D652F302684A2BF0070A280 /* Info.plist */,
+			);
+			path = "iOS (App)";
+			sourceTree = "<group>";
+		};
+		7D652F362684A2BF0070A280 /* macOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				7D652F372684A2BF0070A280 /* AppDelegate.swift */,
+				7D652F392684A2BF0070A280 /* Main.storyboard */,
+				7D652F3C2684A2BF0070A280 /* Info.plist */,
+				7D652F3D2684A2BF0070A280 /* Rikai.entitlements */,
+			);
+			path = "macOS (App)";
+			sourceTree = "<group>";
+		};
+		7D652F462684A2BF0070A280 /* iOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				7D652F472684A2BF0070A280 /* Info.plist */,
+			);
+			path = "iOS (Extension)";
+			sourceTree = "<group>";
+		};
+		7D652F502684A2BF0070A280 /* macOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				7D652F512684A2BF0070A280 /* Info.plist */,
+			);
+			path = "macOS (Extension)";
+			sourceTree = "<group>";
+		};
+		7D652F702684A2C00070A280 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7D652F712684A2C00070A280 /* rikaichamp-jpdict.js.map */,
+				7D652F722684A2C00070A280 /* rikaichamp-content.js.map */,
+				7D652F732684A2C00070A280 /* css */,
+				7D652F742684A2C00070A280 /* images */,
+				7D652F752684A2C00070A280 /* rikaichamp-content.js */,
+				7D652F762684A2C00070A280 /* rikaichamp-background.js.map */,
+				7D652F772684A2C00070A280 /* manifest.json */,
+				7D652F782684A2C00070A280 /* rikaichamp-jpdict.js */,
+				7D652F792684A2C00070A280 /* options.html */,
+				7D652F7A2684A2C00070A280 /* rikaichamp-background.js */,
+				7D652F7B2684A2C00070A280 /* rikaichamp-options.js.map */,
+				7D652F7C2684A2C00070A280 /* _locales */,
+				7D652F7D2684A2C00070A280 /* data */,
+				7D652F7E2684A2C00070A280 /* rikaichamp-options.js */,
+			);
+			name = Resources;
+			path = "Shared (Extension)";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7D652F222684A2BF0070A280 /* Rikai (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D652F662684A2BF0070A280 /* Build configuration list for PBXNativeTarget "Rikai (iOS)" */;
+			buildPhases = (
+				7D652F1F2684A2BF0070A280 /* Sources */,
+				7D652F202684A2BF0070A280 /* Frameworks */,
+				7D652F212684A2BF0070A280 /* Resources */,
+				7D652F652684A2BF0070A280 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D652F452684A2BF0070A280 /* PBXTargetDependency */,
+			);
+			name = "Rikai (iOS)";
+			productName = "Rikai (iOS)";
+			productReference = 7D652F232684A2BF0070A280 /* Rikai.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7D652F342684A2BF0070A280 /* Rikai (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D652F6D2684A2BF0070A280 /* Build configuration list for PBXNativeTarget "Rikai (macOS)" */;
+			buildPhases = (
+				7D652F312684A2BF0070A280 /* Sources */,
+				7D652F322684A2BF0070A280 /* Frameworks */,
+				7D652F332684A2BF0070A280 /* Resources */,
+				7D652F6C2684A2BF0070A280 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D652F4F2684A2BF0070A280 /* PBXTargetDependency */,
+			);
+			name = "Rikai (macOS)";
+			productName = "Rikai (macOS)";
+			productReference = 7D652F352684A2BF0070A280 /* Rikai.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7D652F412684A2BF0070A280 /* Rikai Extension (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D652F622684A2BF0070A280 /* Build configuration list for PBXNativeTarget "Rikai Extension (iOS)" */;
+			buildPhases = (
+				7D652F3E2684A2BF0070A280 /* Sources */,
+				7D652F3F2684A2BF0070A280 /* Frameworks */,
+				7D652F402684A2BF0070A280 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Rikai Extension (iOS)";
+			productName = "Rikai Extension (iOS)";
+			productReference = 7D652F422684A2BF0070A280 /* Rikai Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		7D652F4B2684A2BF0070A280 /* Rikai Extension (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D652F692684A2BF0070A280 /* Build configuration list for PBXNativeTarget "Rikai Extension (macOS)" */;
+			buildPhases = (
+				7D652F482684A2BF0070A280 /* Sources */,
+				7D652F492684A2BF0070A280 /* Frameworks */,
+				7D652F4A2684A2BF0070A280 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Rikai Extension (macOS)";
+			productName = "Rikai Extension (macOS)";
+			productReference = 7D652F4C2684A2BF0070A280 /* Rikai Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7D652F102684A2BE0070A280 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					7D652F222684A2BF0070A280 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					7D652F342684A2BF0070A280 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					7D652F412684A2BF0070A280 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					7D652F4B2684A2BF0070A280 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+				};
+			};
+			buildConfigurationList = 7D652F132684A2BE0070A280 /* Build configuration list for PBXProject "Rikai" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7D652F0F2684A2BE0070A280;
+			productRefGroup = 7D652F242684A2BF0070A280 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7D652F222684A2BF0070A280 /* Rikai (iOS) */,
+				7D652F342684A2BF0070A280 /* Rikai (macOS) */,
+				7D652F412684A2BF0070A280 /* Rikai Extension (iOS) */,
+				7D652F4B2684A2BF0070A280 /* Rikai Extension (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7D652F212684A2BF0070A280 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D652F542684A2BF0070A280 /* Icon.png in Resources */,
+				7D652F2C2684A2BF0070A280 /* LaunchScreen.storyboard in Resources */,
+				7D652F522684A2BF0070A280 /* Main.html in Resources */,
+				7D652F582684A2BF0070A280 /* Script.js in Resources */,
+				7D652F5C2684A2BF0070A280 /* Assets.xcassets in Resources */,
+				7D652F2F2684A2BF0070A280 /* Main.storyboard in Resources */,
+				7D652F562684A2BF0070A280 /* Style.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D652F332684A2BF0070A280 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D652F552684A2BF0070A280 /* Icon.png in Resources */,
+				7D652F572684A2BF0070A280 /* Style.css in Resources */,
+				7D652F3B2684A2BF0070A280 /* Main.storyboard in Resources */,
+				7D652F592684A2BF0070A280 /* Script.js in Resources */,
+				7D652F5D2684A2BF0070A280 /* Assets.xcassets in Resources */,
+				7D652F532684A2BF0070A280 /* Main.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D652F402684A2BF0070A280 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D652F8C2684A2C00070A280 /* manifest.json in Resources */,
+				7D652F8A2684A2C00070A280 /* images in Resources */,
+				7D652F902684A2C00070A280 /* _locales in Resources */,
+				7D652F8B2684A2C00070A280 /* rikaichamp-content.js in Resources */,
+				7D652F912684A2C00070A280 /* data in Resources */,
+				7D652F892684A2C00070A280 /* css in Resources */,
+				7D652F922684A2C00070A280 /* rikaichamp-options.js in Resources */,
+				7D652F8F2684A2C00070A280 /* rikaichamp-background.js in Resources */,
+				7D652F8D2684A2C00070A280 /* rikaichamp-jpdict.js in Resources */,
+				7D652F8E2684A2C00070A280 /* options.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D652F4A2684A2BF0070A280 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D652F822684A2C00070A280 /* manifest.json in Resources */,
+				7D652F802684A2C00070A280 /* images in Resources */,
+				7D652F862684A2C00070A280 /* _locales in Resources */,
+				7D652F812684A2C00070A280 /* rikaichamp-content.js in Resources */,
+				7D652F872684A2C00070A280 /* data in Resources */,
+				7D652F7F2684A2C00070A280 /* css in Resources */,
+				7D652F882684A2C00070A280 /* rikaichamp-options.js in Resources */,
+				7D652F852684A2C00070A280 /* rikaichamp-background.js in Resources */,
+				7D652F832684A2C00070A280 /* rikaichamp-jpdict.js in Resources */,
+				7D652F842684A2C00070A280 /* options.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7D652F1F2684A2BF0070A280 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D652F5A2684A2BF0070A280 /* ViewController.swift in Sources */,
+				7D652F272684A2BF0070A280 /* AppDelegate.swift in Sources */,
+				7D652F292684A2BF0070A280 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D652F312684A2BF0070A280 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D652F5B2684A2BF0070A280 /* ViewController.swift in Sources */,
+				7D652F382684A2BF0070A280 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D652F3E2684A2BF0070A280 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D652F5E2684A2BF0070A280 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D652F482684A2BF0070A280 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D652F5F2684A2BF0070A280 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7D652F452684A2BF0070A280 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D652F412684A2BF0070A280 /* Rikai Extension (iOS) */;
+			targetProxy = 7D652F442684A2BF0070A280 /* PBXContainerItemProxy */;
+		};
+		7D652F4F2684A2BF0070A280 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D652F4B2684A2BF0070A280 /* Rikai Extension (macOS) */;
+			targetProxy = 7D652F4E2684A2BF0070A280 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7D652F162684A2BE0070A280 /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D652F172684A2BE0070A280 /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		7D652F2A2684A2BF0070A280 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D652F2B2684A2BF0070A280 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7D652F2D2684A2BF0070A280 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D652F2E2684A2BF0070A280 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7D652F392684A2BF0070A280 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D652F3A2684A2BF0070A280 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7D652F602684A2BF0070A280 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7D652F612684A2BF0070A280 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		7D652F632684A2BF0070A280 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Rikai Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.bottledlogic.Rikai.Extension;
+				PRODUCT_NAME = "Rikai Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7D652F642684A2BF0070A280 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Rikai Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.bottledlogic.Rikai.Extension;
+				PRODUCT_NAME = "Rikai Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7D652F672684A2BF0070A280 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Rikai;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.bottledlogic.Rikai;
+				PRODUCT_NAME = Rikai;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7D652F682684A2BF0070A280 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Rikai;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.bottledlogic.Rikai;
+				PRODUCT_NAME = Rikai;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7D652F6A2684A2BF0070A280 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Rikai Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.bottledlogic.Rikai.Extension;
+				PRODUCT_NAME = "Rikai Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		7D652F6B2684A2BF0070A280 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Rikai Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.bottledlogic.Rikai.Extension;
+				PRODUCT_NAME = "Rikai Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		7D652F6E2684A2BF0070A280 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Rikai.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Rikai;
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.bottledlogic.Rikai;
+				PRODUCT_NAME = Rikai;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		7D652F6F2684A2BF0070A280 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Rikai.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Rikai;
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.bottledlogic.Rikai;
+				PRODUCT_NAME = Rikai;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7D652F132684A2BE0070A280 /* Build configuration list for PBXProject "Rikai" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D652F602684A2BF0070A280 /* Debug */,
+				7D652F612684A2BF0070A280 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D652F622684A2BF0070A280 /* Build configuration list for PBXNativeTarget "Rikai Extension (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D652F632684A2BF0070A280 /* Debug */,
+				7D652F642684A2BF0070A280 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D652F662684A2BF0070A280 /* Build configuration list for PBXNativeTarget "Rikai (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D652F672684A2BF0070A280 /* Debug */,
+				7D652F682684A2BF0070A280 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D652F692684A2BF0070A280 /* Build configuration list for PBXNativeTarget "Rikai Extension (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D652F6A2684A2BF0070A280 /* Debug */,
+				7D652F6B2684A2BF0070A280 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D652F6D2684A2BF0070A280 /* Build configuration list for PBXNativeTarget "Rikai (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D652F6E2684A2BF0070A280 /* Debug */,
+				7D652F6F2684A2BF0070A280 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7D652F102684A2BE0070A280 /* Project object */;
+}

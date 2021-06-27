@@ -1,3 +1,5 @@
+import puckStyles from '../css/puck.css';
+
 export interface PuckOpts {
   width: number;
   height: number;
@@ -7,6 +9,7 @@ export interface PuckOpts {
 
 export class RikaiPuck {
   private readonly puck: HTMLDivElement = document.createElement("div");
+  private readonly style: HTMLStyleElement = document.createElement("style");
   private static defaultOpts: PuckOpts = {
     width: 50,
     height: 50,
@@ -67,6 +70,9 @@ export class RikaiPuck {
     this.puck.style.border = `2px solid ${borderColor}`;
     // We use a z-index one higher than the Rikai popup itself.
     this.puck.style.zIndex = "1000002";
+
+    this.style.textContent = puckStyles;
+    this.puck.appendChild(this.style);
   }
   private readonly onPointermove = (event: PointerEvent) => {
     event.preventDefault();

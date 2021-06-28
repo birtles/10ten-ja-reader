@@ -1,111 +1,124 @@
-export interface PuckOpts {
-  width: number;
-  height: number;
-  borderColor: string;
-  backgroundColor: string;
-}
+import { getOrCreateContentContainer } from './content-container';
 
 export class RikaiPuck {
-  private readonly puck: HTMLDivElement = document.createElement("div");
-  private static defaultOpts: PuckOpts = {
-    width: 50,
-    height: 50,
-    borderColor: "#b7e7ff",
-    backgroundColor: "#5c73b8",
-  };
-  private _puckX: number;
-  private get puckX(): number {
-    return this._puckX;
-  }
-  private set puckX(x: number){
-    this._puckX = x;
-    this.puck.style.transform = `translate(${x}px, ${this.puckY}px)`;
-  }
-  private _puckY: number;
-  private get puckY(): number {
-    return this._puckY;
-  }
-  private set puckY(y: number){
-    this._puckY = y;
-    this.puck.style.transform = `translate(${this.puckX}px, ${y}px)`;
+  private puckElem: HTMLElement | undefined;
+  private enabled = false;
+
+  private puckX: number;
+  private puckY: number;
+  private setPosition(x: number, y: number) {
+    this.puckX = x;
+    this.puckY = y;
+    if (this.puckElem) {
+      this.puckElem.style.transform = `translate(${this.puckX}px, ${this.puckY}px)`;
+    }
   }
 
-  private _puckWidth: number;
-  private get puckWidth(): number {
-    return this._puckWidth;
-  }
-  private set puckWidth(width: number){
-    this._puckWidth = width;
-    this.puck.style.width = `${width}px`;
-  }
-  private _puckHeight: number;
-  private get puckHeight(): number {
-    return this._puckHeight;
-  }
-  private set puckHeight(height: number){
-    this._puckHeight = height;
-    this.puck.style.height = `${height}px`;
-  }
+  private puckWidth: number;
+  private puckHeight: number;
 
-  constructor(opts: Partial<PuckOpts> = RikaiPuck.defaultOpts){
-    const {
-      width,
-      height,
-      backgroundColor,
-      borderColor,
-    } = Object.assign({}, RikaiPuck.defaultOpts, opts);
+  private readonly onPointerMove = (event: PointerEvent) => {
+    if (!this.puckWidth || !this.puckHeight || !this.enabled) {
+      return;
+    }
 
-    this.puck.style.position = "fixed";
-    this.puckWidth = width;
-    this.puckHeight = height;
-    this.puck.style.top = "0";
-    this.puck.style.left = "0";
-    this.puck.style.boxSizing = "border-box";
-    this.puck.style.backgroundColor = backgroundColor;
-    this.puck.style.touchAction = "manipulation";
-    this.puck.style.borderRadius = "15px";
-    this.puck.style.border = `2px solid ${borderColor}`;
-    // We use a z-index one higher than the Rikai popup itself.
-    this.puck.style.zIndex = "1000002";
-  }
-  private readonly onPointermove = (event: PointerEvent) => {
     event.preventDefault();
-    const { clientX, clientY } = event;
-    this.puckX = clientX - this.puckWidth / 2;
-    this.puckY = clientY - this.puckHeight / 2;
-    window.dispatchEvent(
-      new MouseEvent(
-        "mousemove",
-        {
-          clientX: this.puckX,
-          // Offset by at least one pixel so that Rikai doesn't attempt to tunnel into the puck rather than the text.
-          clientY: this.puckY - 1,
-        }
-      )
-    );
-  }
 
-  render(parent: HTMLElement): void {
-    const viewportWidth = document.documentElement.clientWidth;
-    const viewportHeight = document.documentElement.clientHeight;
+    // Work out where the puck should be
+    const { clientX, clientY } = event;
+    this.setPosition(
+      clientX - this.puckWidth / 2,
+      clientY - this.puckHeight / 2
+    );
+
+    // Work out where we want to lookup
+    const targetX = this.puckX;
+    // Offset by at least one pixel so that Rikai doesn't attempt to tunnel into
+    // the puck rather than the text.
+    const targetY = this.puckY - 1;
+
+    // Make sure the target is an actual element since the mousemove handler
+    // expects that.
+    const target = document.elementFromPoint(targetX, targetY);
+    if (target) {
+      target.dispatchEvent(
+        new MouseEvent('mousemove', {
+          // Make sure the event bubbles up to the listener on the window
+          bubbles: true,
+          clientX: targetX,
+          clientY: targetY,
+        })
+      );
+    }
+  };
+
+  // Prevent any mouse events on the puck itself from being used for lookup.
+  //
+  // At least in Firefox Responsive Design Mode (with touch simulation disabled)
+  // we can get _both_ pointer events and mouse events being dispatched.
+  private readonly onMouseMove = (event: MouseEvent) => {
+    event.stopPropagation();
+  };
+
+  render(doc: Document): void {
+    // Remove any existing pucks (e.g. if we are upgrading and failed to clean
+    // up last time).
+    const contentContainer = getOrCreateContentContainer(doc);
+    const existingPucks = Array.from<Element>(
+      contentContainer.shadowRoot!.querySelectorAll('#puck')
+    );
+    while (existingPucks.length) {
+      existingPucks.pop()!.remove();
+    }
+
+    // Create the new puck
+    this.puckElem = doc.createElement('div');
+    this.puckElem.id = 'puck';
+    contentContainer.shadowRoot!.append(this.puckElem);
+
+    // Calculate its size
+    if (!this.puckWidth || !this.puckHeight) {
+      const { width, height } = this.puckElem.getBoundingClientRect();
+      this.puckWidth = width;
+      this.puckHeight = height;
+    }
+
+    // Calculate its initial position
+    const viewportWidth = doc.documentElement.clientWidth;
+    const viewportHeight = doc.documentElement.clientHeight;
     const safeAreaInsetRight = 16; // TODO: calculate properly
     const safeAreaInsetBottom = 200; // TODO: calculate properly
-    this.puckX = viewportWidth - this.puckWidth - safeAreaInsetRight;
-    this.puckY = viewportHeight - this.puckHeight - safeAreaInsetBottom;
+    this.setPosition(
+      viewportWidth - this.puckWidth - safeAreaInsetRight,
+      viewportHeight - this.puckHeight - safeAreaInsetBottom
+    );
 
-    parent.appendChild(this.puck);
-  }
-
-  unmount(): void {
-    this.puck.parentElement?.removeChild(this.puck);
-    this.disable();
+    // Add event listeners
+    if (this.enabled) {
+      this.puckElem.addEventListener('pointermove', this.onPointerMove);
+      this.puckElem.addEventListener('mousemove', this.onMouseMove, {
+        capture: true,
+      });
+    }
   }
 
   enable(): void {
-    this.puck.addEventListener("pointermove", this.onPointermove);
+    this.enabled = true;
+    if (this.puckElem) {
+      this.puckElem.addEventListener('pointermove', this.onPointerMove);
+      this.puckElem.addEventListener('mousemove', this.onMouseMove, {
+        capture: true,
+      });
+    }
   }
 
   disable(): void {
-    this.puck.removeEventListener("pointermove", this.onPointermove);
+    this.enabled = false;
+    if (this.puckElem) {
+      this.puckElem.removeEventListener('pointermove', this.onPointerMove);
+      this.puckElem.removeEventListener('mousemove', this.onMouseMove, {
+        capture: true,
+      });
+    }
   }
 }

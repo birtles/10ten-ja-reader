@@ -7,17 +7,8 @@
   font-family: Meiryo, sans-serif;
 }
 
-.window {
-  max-width: 600px;
-  contain: content;
-  border-radius: 5px;
-  box-shadow: 2px 2px 1px rgba(100, 100, 100, 0.25);
-  font: normal 14px sans-serif;
-
-  color: var(--text-color);
-  background: var(--bg-color);
-  border: 1px solid var(--border-color);
-
+:root,
+:host {
   --tag-green: #43a047aa;
   --tag-pink: #f24b59aa;
   --tag-blue: #2698fbaa;
@@ -29,6 +20,44 @@
   --selected-def-color: #1a1d1f;
   --selected-tag-color: #1a1d1f;
   --selected-tag-border: rgba(0, 0, 0, 0.3);
+}
+
+/* ---------------------------------------------------------------------------
+ *
+ * Popup window
+ *
+ * -------------------------------------------------------------------------- */
+
+#popup {
+  position: absolute;
+  /* asahi.com puts z-index: 1000000 on its banner ads. We go one better. */
+  z-index: 1000001;
+  /* Make sure the drop shadow doesn't get cut off */
+  padding-right: 4px;
+  padding-bottom: 4px;
+
+  /* Set initial position */
+  top: 5px;
+  left: 5px;
+  min-width: 100px;
+
+  /* Enforce any max-height set on the popup container. */
+  overflow-y: hidden;
+
+  /* Make sure the popup container too doesn't receive pointer events */
+  pointer-events: none;
+}
+
+.window {
+  max-width: 600px;
+  contain: content;
+  border-radius: 5px;
+  box-shadow: 2px 2px 1px rgba(100, 100, 100, 0.25);
+  font: normal 14px sans-serif;
+
+  color: var(--text-color);
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
 }
 
 .window.hidden {
@@ -675,12 +704,41 @@
   padding-right: 5px;
 }
 
+/* ---------------------------------------------------------------------------
+ *
+ * Puck
+ *
+ * -------------------------------------------------------------------------- */
+
+#puck {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  /* We use a z-index one higher than the popup */
+  z-index: 1000002;
+  touch-action: manipulation;
+  background: var(--bg-color);
+  border: 2px solid var(--border-color);
+  border-radius: 15px;
+}
+
+/* ---------------------------------------------------------------------------
+ *
+ * Themes
+ *
+ * -------------------------------------------------------------------------- */
+
 /*
  * Theme - light
  */
 
 .window,
-.window.-light {
+#puck,
+.window.-light,
+#puck.-light {
   --text-color: #1d1a19;
   --bg-color: #f6f1f0;
   --border-color: #706c6b;
@@ -707,7 +765,8 @@
  * Theme - blue
  */
 
-.window.-blue {
+.window.-blue,
+#puck.-blue {
   --text-color: white;
   --bg-color: #446ea0;
   --border-color: #17588e;
@@ -736,7 +795,8 @@
  * Theme - black
  */
 
-.window.-black {
+.window.-black,
+#puck.-black {
   --text-color: white;
   --bg-color: #3e3a39;
   --border-color: #999493;
@@ -769,7 +829,8 @@
  * Theme - lightblue
  */
 
-.window.-lightblue {
+.window.-lightblue,
+#puck.-lightblue {
   --text-color: #1d1a19;
   --bg-color: #e3f2fe;
   --border-color: #65b7fc;
@@ -798,7 +859,8 @@
  * Theme - yellow
  */
 
-.window.-yellow {
+.window.-yellow,
+#puck.-yellow {
   --text-color: #1d1a19;
   --bg-color: #fff8bf;
   --border-color: #ffd600;

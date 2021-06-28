@@ -48,6 +48,11 @@
 import Browser, { browser } from 'webextension-polyfill-ts';
 
 import { ContentConfig } from './content-config';
+import {
+  removeAllContent,
+  removePopupContainer,
+  setContentStyle,
+} from './content-container';
 import { CopyKeys, CopyType } from './copy-keys';
 import {
   getEntryToCopy,
@@ -69,9 +74,7 @@ import {
   hidePopup,
   isPopupVisible,
   PopupOptions,
-  removePopup,
   renderPopup,
-  setPopupStyle,
 } from './popup';
 import { getPopupPosition, PopupPositionMode } from './popup-position';
 import { RikaiPuck } from './puck';
@@ -176,7 +179,7 @@ export class ContentHandler {
   setConfig(config: Readonly<ContentConfig>) {
     // Update the style of the popup
     if (this.config && config.popupStyle !== this.config.popupStyle) {
-      setPopupStyle(config.popupStyle);
+      setContentStyle(config.popupStyle);
     }
 
     // TODO: We should probably check which keys have changed and regenerate
@@ -195,7 +198,9 @@ export class ContentHandler {
     this.selectedTextBox = null;
     this.copyMode = false;
 
-    removePopup();
+    // Just remove the popup container since we might still need the puck in
+    // order to have it show its disabled status.
+    removePopupContainer();
   }
 
   onMouseMove(ev: MouseEvent) {
@@ -850,9 +855,7 @@ export class ContentHandler {
       return;
     }
 
-    const doc: Document = this.currentTarget
-      ? this.currentTarget.ownerDocument!
-      : window.document;
+    const doc: Document = this.currentTarget?.ownerDocument ?? window.document;
 
     const popupOptions: PopupOptions = {
       accentDisplay: this.config.accentDisplay,
@@ -1027,6 +1030,8 @@ declare global {
   window.readerScriptVer = __VERSION__;
   window.removeReaderScript = () => {
     disable();
+    // Disabling doesn't remove the puck and outermost content container
+    removeAllContent();
     browser.runtime.onMessage.removeListener(onMessage);
   };
 
@@ -1045,6 +1050,19 @@ declare global {
     browser.runtime.sendMessage({ type: 'enable?' }).catch(() => {
       // Ignore
     });
+  }
+
+  // Render the puck
+  if (document.readyState !== 'loading') {
+    renderPuck();
+  } else {
+    window.addEventListener('DOMContentLoaded', renderPuck);
+  }
+
+  function renderPuck() {
+    const puck = new RikaiPuck();
+    puck.render(document);
+    puck.enable();
   }
 
   function onMessage(request: any): Promise<string> {
@@ -1091,7 +1109,10 @@ declare global {
     } else {
       // When the extension is upgraded, we can still have the old popup
       // window hanging around so make sure to clear it.
-      removePopup();
+      removePopupContainer();
+      // Note that we can't drop the old puck here because it might get added
+      // before we are enabled. That's ok because the puck is responsible for
+      // clearing any old pucks it encounters when it is first rendered.
       contentHandler = new ContentHandler(config);
     }
 
@@ -1135,24 +1156,6 @@ declare global {
 
   function onPageHide() {
     browser.runtime.sendMessage({ type: 'disabled' });
-  }
-
-  function onDOMContentLoaded(): void {
-    const rp = new RikaiPuck();
-    rp.render(document.body);
-    rp.enable();
-  }
-
-  if (document?.readyState === "interactive") {
-    onDOMContentLoaded();
-  } else {
-    window.addEventListener(
-      'DOMContentLoaded',
-      onDOMContentLoaded,
-      {
-        once: true,
-      },
-    );
   }
 })();
 

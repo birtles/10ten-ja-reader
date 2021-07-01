@@ -127,6 +127,7 @@ export class RikaiPuck {
   unmount(): void {
     removeContentContainer('tenten-ja-puck');
     this.disable();
+    this.puck = undefined;
   }
 
   enable(): void {
